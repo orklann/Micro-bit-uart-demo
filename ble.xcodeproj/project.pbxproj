@@ -11,6 +11,8 @@
 		935B3AD6212BB01000850794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935B3AD5212BB01000850794 /* Assets.xcassets */; };
 		935B3AD9212BB01000850794 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935B3AD7212BB01000850794 /* MainMenu.xib */; };
 		935B3ADC212BB01000850794 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 935B3ADB212BB01000850794 /* main.m */; };
+		935B3AE5212BB4FA00850794 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 935B3AE4212BB4FA00850794 /* CoreBluetooth.framework */; };
+		935B3AE7212BB59B00850794 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 935B3AE6212BB59B00850794 /* IOBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		935B3ADA212BB01000850794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		935B3ADB212BB01000850794 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		935B3ADD212BB01000850794 /* ble.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ble.entitlements; sourceTree = "<group>"; };
+		935B3AE4212BB4FA00850794 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		935B3AE6212BB59B00850794 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				935B3AE7212BB59B00850794 /* IOBluetooth.framework in Frameworks */,
+				935B3AE5212BB4FA00850794 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 			children = (
 				935B3AD1212BB01000850794 /* ble */,
 				935B3AD0212BB01000850794 /* Products */,
+				935B3AE3212BB4FA00850794 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +70,15 @@
 				935B3ADD212BB01000850794 /* ble.entitlements */,
 			);
 			path = ble;
+			sourceTree = "<group>";
+		};
+		935B3AE3212BB4FA00850794 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				935B3AE6212BB59B00850794 /* IOBluetooth.framework */,
+				935B3AE4212BB4FA00850794 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,11 +277,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ble/ble.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = PixelEgg.me.ble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -275,11 +291,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ble/ble.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = PixelEgg.me.ble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
